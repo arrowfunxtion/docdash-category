@@ -1,0 +1,32 @@
+{
+  "author": {
+    "name": "Muhammad Azamuddin",
+    "email": "mas.azamuddin@gmail.com"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A clean, responsive documentation template theme for JSDoc 3 inspired by lodash and minami",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "jsdoc": "latest",
+    "watch-run": "latest"
+  },
+  "homepage": "https://github.com/arrowfunxtion/docdash-category",
+  "keywords": [
+    "jsdoc",
+    "template"
+  ],
+  "license": "Apache-2.0",
+  "main": "publish.js",
+  "name": "docdash",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrowfunxtion/docdash-category.git"
+  },
+  "scripts": {
+    "sync": "browser-sync start -s ../fixtures-doc -f ../fixtures-doc --reload-delay 1000 --no-ui --no-notify",
+    "test": "jsdoc -c fixtures/fixtures.conf.json",
+    "watch": "watch-run -d 1000 -p tmpl/**,static/** \"npm run test\""
+  },
+  "version": "0.1.0"
+}
